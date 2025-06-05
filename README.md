@@ -1,6 +1,6 @@
 # NEAT-CAR
 
-# Overview
+## Overview
 
 This project implements an AI-driven car racing simulation using Pygame and the NEAT (NeuroEvolution of Augmenting Topologies) library. Cars learn to navigate a track (mark7.png) using a neural network that evolves over generations. The simulation tracks fitness, collisions, distance traveled, and other metrics, visualized through plots.
 
