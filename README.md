@@ -36,7 +36,7 @@ To create a new track:
 Design the Track: Use an image editor to create a track similar to mark7.png. The track should be black (RGB: (0, 0, 0)), the borders green (RGB: (100, 125, 49)), and the background green. Include a checkered start/finish line (black and white pattern).
 
 Save the Track: Save the track image as a PNG file (e.g., new_track.png) with dimensions matching the simulation window (1280x720 by default).
-Update the Code: In main.py, modify the line loading the track image in the run_simulation function:
+Update the Code: In neat-car.py, modify the line loading the track image in the run_simulation function:
 game_map = pygame.image.load('new_track.png').convert()
 
 ## Positioning Cars on New Tracks
