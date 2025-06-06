@@ -6,18 +6,18 @@ This project implements an AI-driven car racing simulation using Pygame and the 
 
 ## Prerequisites
 
-Python 3.x
-Required libraries: pygame, neat-python, matplotlib, numpy
+- Python 3.x
+- Required libraries: pygame, neat-python, matplotlib, numpy
 
-Install dependencies using:
-pip install pygame neat-python matplotlib numpy
+- Install dependencies using:
+``` bash pip install pygame neat-python matplotlib numpy```
 
 ## Files
 
-neat-car.py: The main simulation script.
-mycar.png: The car sprite (a red car, as shown in the provided image).
-mark7.png: The track image (a black track on a green background with a checkered start/finish line, as shown in the provided image).
-config.txt: NEAT configuration file (must be configured for your setup).
+- neat-car.py: The main simulation script.
+- mycar.png: The car sprite (a red car, as shown in the provided image).
+- mark7.png: The track image (a black track on a green background with a checkered start/finish line, as shown in the provided image).
+- config.txt: NEAT configuration file (must be configured for your setup).
 
 ## How to Run
 
@@ -44,7 +44,7 @@ game_map = pygame.image.load('new_track.png').convert()
 Cars are positioned using the position attribute in the Car class, which is a list [x, y] representing the top-left corner of the car sprite. The car size is 55x55 pixels (CAR_SIZE_X, CAR_SIZE_Y).
 
 ### Steps to Position Cars
-Identify Coordinates: Open your new track image in an image editor to find the coordinates of the starting position (e.g., on the start/finish line). Ensure the position keeps the car within the track boundaries, accounting for the car's size.
+- Identify Coordinates: Open your new track image in an image editor to find the coordinates of the starting position (e.g., on the start/finish line). Ensure the position keeps the car within the track boundaries, accounting for the car's size.
 
 ### Update Starting Position: In the Car class __init__ method, modify the self.position:
 
@@ -54,26 +54,26 @@ For example, if the start/finish line on your new track is at coordinates (300, 
 
 self.position = [300, 500]
 
-Verify Position: Run the simulation to ensure the car starts on the track and can move without immediate collisions.
+- Verify Position: Run the simulation to ensure the car starts on the track and can move without immediate collisions.
 Example with Provided Track (mark7.png)
-The provided track has a checkered start/finish line at the bottom center.
-The default position [654, 660] places the car on this line.
-For a new track, adjust these coordinates to match your start/finish line.
+- The provided track has a checkered start/finish line at the bottom center.
+- The default position [654, 660] places the car on this line.
+- For a new track, adjust these coordinates to match your start/finish line.
 
 ## Simulation Features
 
-Neural Network: NEAT evolves the car's behavior to avoid borders and maximize distance traveled.
-Fitness Tracking: Tracks max, average, min, and standard deviation of fitness across generations.
-Performance Metrics: Logs collisions, distance traveled, average speed, time alive, and time stuck.
-Visualization: Plots fitness progression and dead cars per generation using Matplotlib.
+- Neural Network: NEAT evolves the car's behavior to avoid borders and maximize distance traveled.
+- Fitness Tracking: Tracks max, average, min, and standard deviation of fitness across generations.
+- Performance Metrics: Logs collisions, distance traveled, average speed, time alive, and time stuck.
+- Visualization: Plots fitness progression and dead cars per generation using Matplotlib.
 
 ## Customization
-Window Size: Modify WIDTH and HEIGHT to match your track dimensions.
-Car Size: Adjust CAR_SIZE_X and CAR_SIZE_Y if using a different car sprite.
-Border Color: Update BORDER_COLOR to match your track's border color.
-Simulation Duration: Change the number of generations in population.run(run_simulation, 20).
+- Window Size: Modify WIDTH and HEIGHT to match your track dimensions.
+- Car Size: Adjust CAR_SIZE_X and CAR_SIZE_Y if using a different car sprite.
+- Border Color: Update BORDER_COLOR to match your track's border color.
+- Simulation Duration: Change the number of generations in population.run(run_simulation, 20).
 
 ## Notes
 
-The car sprite (mycar.png) must be in the same directory as the script.
-The track image must have the same border color as defined in BORDER_COLOR for collision detection to work.
+- The car sprite (mycar.png) must be in the same directory as the script.
+- The track image must have the same border color as defined in BORDER_COLOR for collision detection to work.
